@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <link rel="stylesheet" href="slider/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="slider/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+<style>
+nav{
+  width: 100%;
+	display: flex;
+	background-color:#fff;
+	/*position: fixed;*/
+  top: 0;
+}
+
+.nav2{
+/*display: inline-block;
+float: right;
+*/
+
+}
+ul.container.ul-reset li {
+    display: inline-block;
+    padding-left: 20px;
+}
+.ul-reset {
+  list-style: none;
+  margin: 22px 0px 0px 21px;
+}
+nav > div > ul > li:first-child {padding-left: 0;}
+nav > div > ul > li:last-child {padding-right: 0;}
+nav > div > ul > li > a {
+	font-size: 15px;
+    letter-spacing: .3px;
+    color: #282c3f;
+  /*color: #fff;*/
+    display: block;
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    /*font-weight: 500px;*/
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+nav > div > ul > li:hover > a {
+  color: #69aae0; 
+    border-bottom: 3px solid #69aae0;
+}
+.mega-menu {
+  background: #f0f0f0;
+    display: none;
+    left: 40;
+    position: absolute;
+    text-align: left;
+    width: 60%;
+}
+.mega-menu h3 {color: #444;}
+  .mega-menu ul {
+  float: left;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    width: 205px;
+}
+.mega-menu ul:last-child {margin-right: 0;}
+.mega-menu a {
+  border-bottom: 1px solid #ddd;
+    color: #fa18e9;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+.mega-menu a:hover {color: #2d6a91;}
+.droppable {position: static;}
+.droppable:hover .mega-menu {display: block;}
+form.example input[type=text] {
+    padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+input{
+      float: left;
+    margin-top: 33px;
+    margin-left: 84px;
+    padding: 10px;
+    width: 497px;
+    border: none;
+    background: #f1f1f1;
+}
+button {
+  border: none;
+  margin-top: 41px;
+  margin-left: -45px;
+}
+.nav3{
+  width: 18%;
+    float: right;
+}
+.right-menu{
+  display: flex;
+}
+.menu1{
+    margin: 34px 0 0px 129px;
+    font-size: 24px;
+}
+.profile{
+    margin: 57px 0 0 -29px;
+    display: flex;
+}
+.wishbox{
+    margin: 37px 0 0 26px;
+    font-size: 20px;
+}
+.wishlist{
+    margin: 57px 0 0 -36px;
+}
+.cartbag{
+    margin: 36px 0 0 16px;
+    font-size: 20px;
+}
+.bag{
+     margin: 57px 0 0 -22px;
+}
+.sec1{
+   background-color: #f06293f2;
+    padding: 1px;
+    color: black;
+   /* position: fixed;*/
+}
+button.owl-next span {
+    background-color: red;
+    padding: 10px;
+    font-size: 35px;
+    position: absolute;
+    top: 35%;
+    right: 0%;
+    color: black;
+}
+button.owl-prev span {
+    background-color: red;
+    padding: 10px;
+    font-size: 35px;
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    color: black;
+}
+.owl-theme .owl-dots .owl-dot span {
+    margin-top: -42px;
+  }
+  .text-img{
+   /* bottom: 0;*/
+   margin-top: -29px;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+   /* -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;*/
+  }
+  #array_result1{
+    /*display: inline-flex;*/
+  }
+  .card{
+    width:288px;
+    /*background-color:gray;*/
+    margin-left: 6px;
+        display: inline-block;
+  }
+  .prod-image img{
+    width: 109%;
+    margin-bottom: 7px;
+  }
+  .text-img2{
+   /* bottom: 0;*/
+   margin-top: -11px;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    } 
+    #array_result2{
+    display: inline-flex;
+  }
+  .card2{
+    width:260px;
+    margin-left: 34px;
+    /*background-color:gray;*/
+       /* display: inline-block;*/
+  }
+  .prod-image2 img{
+    width: 100%;
+    margin-bottom: 7px;
+  }
+  .text-img3{
+   /* bottom: 0;*/
+   margin-top: -11px;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    } 
+    #array_result3{
+    /*display: inline-flex;*/
+  }
+  .card3{
+    width:261px;
+    /*background-color:gray;*/
+    margin-left: 32px;
+        display: inline-block;
+  }
+  .prod-image3 img{
+    width: 100%;
+    margin-bottom: 7px;
+  }
+  .text-img4{
+   /* bottom: 0;*/
+   margin-top: -11px;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    } 
+    #array_result4{
+    display: inline-flex;
+  }
+  .card4{
+    width:261px;
+    /*background-color:gray;*/
+    margin-left: 34px;
+       /* display: inline-block;*/
+  }
+  .prod-image4 img{
+    width: 95%;
+    margin-bottom: 7px;
+  }
+  .text-img5{
+   /* bottom: 0;*/
+   margin-top: -11px;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    } 
+#array_result5{
+    display: inline-flex;
+  }
+  .card5{
+    width:261px;
+    /*background-color:gray;*/
+    margin-left: 34px;
+       /* display: inline-block;*/
+  }
+  .prod-image5 img{
+    width: 95%;
+    margin-bottom: 7px;
+  }
+.text-img6{
+   /* bottom: 0;*/
+   margin-top: -11px;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    } 
+    #array_result6{
+    display: inline-flex;
+  }
+  .card6{
+    width:261px;
+    /*background-color:gray;*/
+    margin-left: 34px;
+       /* display: inline-block;*/
+  }
+  .prod-image6 img{
+    width: 95%;
+    margin-bottom: 7px;
+  }
+  .text-img7{
+   /* bottom: 0;*/
+   margin-top: -11px;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    } 
+    } 
+    #array_result7{
+    /*display: inline-flex;*/
+  }
+  .card7{
+    width:261px;
+    /*background-color:gray;*/
+    margin-left: 32px;
+        display: inline-block;
+  }
+  .prod-image7 img{
+    width: 100%;
+    
+  }
+  footer{
+  width: 100%;
+  display: flex;
+  background-color:#fff;
+  color: black;
+}
+.w-30{
+  width: 30%;
+  margin-left: 20px;
+}
+.footer-ul li, .footer-ul1 li{
+    display: flex;
+  list-style: none;
+  padding-top: 0;
+  display: block;
+  text-align: left;
+  padding-bottom: 9px;
+}
+h3{
+    padding-left: 30px;
+    font-size: 16px;
+    margin-top: 35px;
+}
+h5{
+  padding-left: 30px;
+}
+.footer-ul li a, .footer-ul1 li a{
+color: red;
+text-transform: intial;
+transition: all 2s;
+text-decoration: none;
+}
+ .footer-ul li a:hover{
+  text-decoration: none;
+  padding-left: 10px;
+}
+.footer-ul1 li a:hover{
+  text-decoration: none;
+  padding-left: 10px;
+}
+.social-link{
+    display: flex;
+    padding-left: 30px;
+}
+.stamp{
+    display: flex;
+    margin-top: 24px;
+}
+.Artboard{
+    height: 58px;
+    width: 46px;
+}
+.stamp2{
+    display: flex;
+}
+.Artboard2{
+    height: 50px;
+    width: 46px;
+}
+.stamp3{
+    display: flex;
+}
+.icon{
+    margin-left: 5px;
+}
+.truck{
+        margin-left: 16px;
+    margin-top: 12px;
+    height: 32px;
+}
+tfoot{
+  margin-left: 10px;
+}
+</style>
+</head>
+<body>
+	<nav>
+		<div class="logo">
+				<a href="#"><img src="myntralogo.png" alt="logo" title="myntra.JFIF" width="70px" height="40px" style="margin-left: 50px; margin-top: 25px; "></a>
+			</div>
+			 <div class="nav2">
+             <ul class="container ul-reset">
+             	 <li class='droppable'>
+      <a href='#'><b>Men</b></a>
+      <div class='mega-menu'>
+      	<!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+    <li class='droppable'>
+      <a href='#'><b>women</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+     <li class='droppable'>
+      <a href='#'><b>kids</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+     <li class='droppable'>
+      <a href='#'><b>home & living</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+     <li class='droppable'>
+      <a href='#'><b>Beauty</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+  </ul>
+</div>
+ <div class="nav2">
+  <input placeholder="Search for products, brands and more">
+   <button style="font-size:18px"><i class="fa fa-search"></i></button>
+  </div>
+ <div class="nav3">
+              <div class="right-menu">
+                <i class="fa fa-user menu1"></i>
+                <span class="profile">Profile</span>
+                <i class="fa fa-heart wishbox"></i>
+                <span class="wishlist">Wishlist</span>
+                <i class="fa fa-shopping-bag cartbag"></i>
+                <span class="bag">Bag</span>
+              </div> 
+            </div>
+</nav>
+   <div class="sec1">
+        <center><p>-As per guidelines, we are only delivering essentials in govt-specified pincodes-</p></center>
+     </div>
+     
+      <div class="owl-carousel owl-theme">
+          <div class="item">
+              <img src="file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/banner1.jpg",>  
+            </div>
+             <div class="item">
+              <img src="file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/banner3.jpg",>  
+            </div>
+             <div class="item">
+              <img src="file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/banner4.webp",>  
+            </div>
+             <div class="item">
+              <img src="file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/banner2.webp",>
+            </div>
+        </div>
+
+<script src="slider/assets/vendors/jquery.min.js"></script>
+    <script src="slider/assets/owlcarousel/owl.carousel.js"></script>
+     <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                 autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
+                responsive: {
+            
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 3
+                  },
+                  1000: {
+                    items: 1
+                  }
+                }
+              })
+            })
+          </script>
+        
+            <img class="text-img" src="text-img.WEBP">
+          <div id="array_result1"> </div>
+           <script>
+    const product = [
+    {
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img1sec1.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img2sec1.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img3sec1.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img4sec1.jpg",
+    },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img5sec1.jpg",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img6sec1.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img7sec1.webp",
+     },{
+      "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img8sec1.webp",
+     },{
+      "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img9sec1.webp",
+     },{
+
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img10sec1.webp",
+     }
+    ];
+    for(i=0,len=product.length,text="";i<len; i++){
+      text +='<div class="card"><div class="prod-image">';
+      text +='<img src="'+product[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("array_result1").innerHTML=text;
+    </script>
+
+<img class="text-img2" src="text-img2.WEBP">
+          <div id="array_result2"> </div>
+          <script>
+ const product2= [
+    {
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img1sec2.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img2sec2.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img3sec2.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img4sec2.webp",
+    },{
+
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img5sec2.webp",
+     }
+    ];
+    for(i=0,len=product2.length,text="";i<len; i++){
+      text +='<div class="card2"><div class="prod-image2">';
+      text +='<img src="'+product2[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("array_result2").innerHTML=text;
+    </script>
+<img class="text-img2" src="text-img3.WEBP">
+          <div id="array_result3"> </div>
+          <script>
+    const product3 = [
+    {
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img1sec3.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img2sec3.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img3sec3.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img4sec3.webp",
+    },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img5sec3.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img6sec3.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img7sec3.jpg",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img8sec3.webp",
+     },{
+      "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img9sec3.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img10sec3.webp",
+     }
+    ];
+    for(i=0,len=product3.length,text="";i<len; i++){
+      text +='<div class="card3"><div class="prod-image3">';
+      text +='<img src="'+product3[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("array_result3").innerHTML=text;
+    </script>
+    <img class="text-img4" src="text-img4.WEBP">
+          <div id="array_result4"> </div>
+          <script>
+ const product4= [
+    {
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img1sec4.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img2sec4.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img3sec4.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img4sec4.webp",
+    },{
+
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img5sec4.webp",
+     }
+    ];
+    for(i=0,len=product4.length,text="";i<len; i++){
+      text +='<div class="card4"><div class="prod-image4">';
+      text +='<img src="'+product4[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("array_result4").innerHTML=text;
+    </script>
+     <img class="text-img5" src="text-img5.WEBP">
+          <div id="array_result5"> </div>
+         <script>
+ const product5= [
+    {
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img1sec5.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img2sec5.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img3sec5.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img4sec5.webp",
+    },{
+
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img5sec5.webp",
+     }
+    ];
+    for(i=0,len=product5.length,text="";i<len; i++){
+      text +='<div class="card5"><div class="prod-image5">';
+      text +='<img src="'+product5[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("array_result5").innerHTML=text;
+    </script> 
+      <img class="text-img6" src="text-img6.WEBP">
+          <div id="array_result6"> </div>
+          <script>
+ const product6= [
+    {
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img1sec6.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img2sec6.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img3sec6.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img4sec6.webp",
+    },{
+
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img5sec6.webp",
+     }
+    ];
+    for(i=0,len=product6.length,text="";i<len; i++){
+      text +='<div class="card6"><div class="prod-image6">';
+      text +='<img src="'+product6[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("array_result6").innerHTML=text;
+    </script> 
+    <img class="text-img7" src="text-img7.WEBP">
+          <div id="array_result7"> </div>
+          <script>
+    const product7 = [
+    {
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img1sec7.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img2sec7.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img3sec7.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img4sec7.webp",
+    },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img5sec7.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img6sec7.webp",
+     },{
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img7sec7.webp",
+     },{
+      "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img8sec7.webp",
+     },{
+      "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img9sec7.webp",
+     },{
+
+    "image":"file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/img10sec7.webp",
+     }
+    ];
+    for(i=0,len=product7.length,text="";i<len; i++){
+      text +='<div class="card7"><div class="prod-image7">';
+      text +='<img src="'+product7[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("array_result7").innerHTML=text;
+    </script>
+
+    <footer>
+         <div class="w-30">
+                <h3>ONLINE SHOPPING</h3>
+                <ul class="footer-ul">
+                  <li><a href="#">Men</a></li>
+                  <li><a href="#">Women</a></li>
+                  <li><a href="#">Kids</a></li>
+                  <li><a href="#">Home & Living</a></li>
+                  <li><a href="#">Beauty</a></li>
+                  <li><a href="#">Gift Card</a></li>
+                  <li><a href="#">Myntra Insider</a></li>
+                </ul>
+              </div>
+              <div class="w-30">
+                <h3>USEFUL LINKS</h3>
+                <ul class="footer-ul1">
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">T&C</a></li>
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">Track Orders</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">Cancellation</a></li>
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Whitehat</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Carrers</a></li>
+                  <li><a href="#">Privacy policy</a></li>
+                  <li><a href="#">Sitemap</a></li>
+                </ul>
+              </div>
+              <div class="w-30">
+                <h3>EXPERIENCE MYNTRA APP ON MOBILE</h3>
+                <div>
+                  <a href="https://play.google.com/store/apps/details?id=com.nbt.reader&hl=en_IN&gl=US">
+                 <img class="playstore" src="https://www.hutchrec.com/wp-content/uploads/2018/09/App-Store-and-Google-Play.jpg" width="100px;">
+                  </a>
+              </div>
+              <h5>KEEP IN TOUCH</h5>
+              <div class="social-link">
+                <a href="#"><i class="fa fa-facebook icon"></i></a>
+                <a href="#"><i class="fa fa-twitter icon"></i></a>
+                <a href="#"><i class="fa fa-instagram icon"></i></a>
+                <a href="#"><i class="fa fa-whatsapp icon"></i></a>
+            </div>
+            <p><address>
+         3rd Floor, AKR Tech Park, 7th Mile, Krishna Reddy Industrial Area, Kudlu Gate, Bangalore 560068.
+           </address></p>
+        </div>
+              <div class="w-30">
+                <div class="stamp">
+                    <div>
+                    <img class="Artboard" src="Artboard 5.SVG">    
+             </div>
+              <div>
+                <p><cite><B>100% ORIGINAL</B></cite> guarantee for all products at myntra.com</p>
+            </div>
+        </div>
+        <div class="stamp2">
+             <div>
+             <img class="Artboard2" src="Artboard 5 copy.SVG">    
+             </div>
+             <div>
+             <p><mark><B>Return with 30 days</B></mark> of receiving your order</p>
+            </div>
+        </div>
+        <div class="stamp3">
+            <div>
+        <img  class="truck" src="Truck.png">
+    </div>
+    <div>
+        <p><mark><B>Get free delivdry</B></mark> for every order above Rs.799</p>
+    </div>
+</div>
+</div>
+    </footer>
+ <tfoot>
+  <p>&#169; 2021  All right reserved.Design and developed by:<a target="_blank" href="#">The Web Weaver</a></p>
+</tfoot>
+             
+
+</body>
+</html>

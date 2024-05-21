@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <link rel="stylesheet" href="slider/assets/owlcarousel/assets/owl.carousel.min.css">
+   <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="slider/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+	<style>
+	nav{
+  width: 100%;
+	display: flex;
+	background-color:#fff;
+	position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+/*.nav2{
+display: inline-block;
+float: right;
+}
+*/
+ul.container.ul-reset li {
+    display: inline-block;
+    padding-left: 20px;
+}
+.ul-reset {
+  list-style: none;
+  margin: 22px 0px 0px 21px;
+}
+nav > div > ul > li:first-child {padding-left: 0;}
+nav > div > ul > li:last-child {padding-right: 0;}
+nav > div > ul > li > a {
+	font-size: 15px;
+    letter-spacing: .3px;
+    color: #282c3f;
+  /*color: #fff;*/
+    display: block;
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    /*font-weight: 500px;*/
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+nav > div > ul > li:hover > a {
+  color: #69aae0; 
+    border-bottom: 4px solid #69aae0;
+    text-decoration: none;
+}
+.mega-menu {
+  background: #f0f0f0;
+    display: none;
+    left: 40;
+    position: absolute;
+    text-align: left;
+    width: 60%;
+}
+.mega-menu h3 {color: #444;}
+  .mega-menu ul {
+  float: left;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    width: 205px;
+}
+.mega-menu ul:last-child {margin-right: 0;}
+.mega-menu a {
+  border-bottom: 1px solid #ddd;
+    color: #fa18e9;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+.mega-menu a:hover {color: #2d6a91;}
+.droppable-profile{
+  list-style: none;
+}
+.droppable {position: static;}
+.droppable:hover .mega-menu {display: block;}
+form.example input[type=text] {
+    padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+.ser-box{
+      float: left;
+    margin-top: 33px;
+    margin-left: 84px;
+    padding: 10px;
+    width: 497px;
+    border: none;
+    background: #f1f1f1;
+}
+.ser-icon {
+  border: none;
+  margin-top: 41px;
+  margin-left: -45px;
+}
+.nav3{
+  width: 18%;
+    float: right;
+}
+.right-menu{
+  display: flex;
+}
+.menu1{
+    margin: 34px 0 0px 129px;
+    font-size: 24px;
+}
+.wishbox{
+    margin: 37px 0 0 26px;
+    font-size: 20px;
+}
+.wishlist{
+    margin: 57px 0 0 -36px;
+}
+.cartbag{
+    margin: 36px 0 0 16px;
+    font-size: 20px;
+}
+.bag{
+     margin: 57px 0 0 -22px;
+}
+.droppable-profile:hover .mega-menu-profile {
+    display: inline-block;
+}
+.droppable-profile {
+    position: static;
+}
+.mega-menu-profile {
+  background: #f0f0f0;
+  display: none;
+  position: absolute;
+  width: 20%;
+  margin-top: 4px;
+  right: 1rem;
+  text-align: left;
+}
+   /* width: 250px;
+    left: -137.5px;
+    top: 62px;
+    position: absolute;
+    padding: 25px 20px 15px;
+    z-index: 9;
+    box-shadow: 0 1px 10px rgb(0 0 0 / 8%);
+    box-shadow: 0 1px 10px rgb(0 0 0 / 8%);
+    -webkit-transition: opacity .2s ease-out,visibility .2s ease-out;
+    transition: opacity .2s ease-out,visibility .2s ease-out;
+    background-color: #fff;
+    color: #3e4152;
+    border: 1px solid #f5f5f6;
+    visibility: hidden;
+    opacity: 0;
+    margin: -2px 0;
+}*/
+.mega-menu-profile ul:last-child {
+    margin-right: 0;
+}
+.mega-menu-profile ul {
+    float: left;
+    margin-bottom: 20px;
+}
+.mega-menu-profile.ul-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.profile{
+margin: 56px 0 0 -27px;
+    display: flex;
+}
+.pro{
+  text-decoration: none;
+  color: black;
+}
+.profile:hover{
+  color: #f16565;
+  border-bottom: 4px solid #f16565;
+}
+.login{
+  padding: 18px 20px;
+  margin-left: -15px;
+  margin-top: 0px;
+  color: #ff3f6c;
+  border: 1px solid #cbcbd0;
+  font-size: 14px;
+  border-radius: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.login:hover{
+ border: 2px solid #ff3f6c;
+}
+.login-box{
+  list-style: none;
+}
+.menu-bar li a{
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: -15px;
+  color: black;
+}
+.menu-bar li a:hover{
+  color:#ff3f6c;
+}
+h3{
+    padding-left: 30px;
+    font-size: 16px;
+    margin-top: 35px;
+}
+.pa1{
+  margin-left: -48px;
+}
+.pa2{
+  margin-left: -15px;
+  margin-top: -2px;
+  margin-bottom: 11px;
+}
+
+.fb-btn:hover{
+  color:#3B5998;
+  background-color: #007bff00;
+  border-color: #3B5998;
+}
+.gog-btn:hover{
+  color:#dd4b39; 
+  background-color: #007bff00;
+  border-color: #dd4b39;
+}
+ .fb{
+    vertical-align: middle;
+    border-style: none;
+    width: 40px;
+}
+.go{
+    vertical-align: middle;
+    border-style: none;
+    width: 30px;
+    height: 39px;
+}
+.login-input{
+  border:none;
+  border-bottom: 2px solid #d5a249;
+}
+.login-input:focus{
+  color: #495057;
+  background-color: #fff;
+  border-color:#d5a249;
+  outline: 0;
+  box-shadow: none;
+}
+.con-btn{
+  background-color: #d5a249;
+}
+.gif-img{
+  width: 38px;
+}
+.sidebar{
+    right: 0;
+}
+.sidebar {
+    position: fixed;
+    bottom: 14rem;
+    width: 48px;
+    height: 245px;
+    background-color: #535766;
+    z-index: 6;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.sidebar3{
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    width: 36px;
+    padding: 4px;
+    height: 241px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    -webkit-margin-after: 0;
+    margin-block-end: 0;
+    -webkit-margin-before: 0;
+    margin-block-start: 0;
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+.ban-sec{
+	margin-top: 6rem;
+}
+.ban-img{
+  width: 96%;
+  margin-left: 2rem;
+  margin-bottom: 7rem;
+}
+h4{
+	text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    margin: 50px 0 10px 30px;
+    max-height: 5em;
+    font-weight: 500;
+
+}
+.tex1{
+    margin-top: -45px;
+    margin-bottom: 40px;
+}	
+.accessories-item li a{
+  color: #3e4152;
+  font-size: 14px;
+}
+.list-group-item{
+  border: none;
+  padding: 0px;
+  color: #3e4152;
+  font-size: 14px;
+}
+h6{
+  padding-top: 1rem;
+}
+.back{
+  background-color: #f0eeef;
+}
+#home_result1{
+    display: inline-flex;
+  }
+  .card-home1{
+    width:20%;
+    /*background-color:gray;*/
+    margin-left: 2px;
+        /*display: inline-block;*/
+        margin-bottom: 4rem;
+  }
+  .home-image1 img{
+    width: 100%;
+    margin-bottom: -4rem;
+  }
+
+ footer{
+  width: 100%;
+  display: flex;
+  background-color:#fff;
+  color: black;
+}
+.w-30{
+  width: 30%;
+  margin-left: 20px;
+}
+.footer-ul li, .footer-ul1 li{
+    display: flex;
+  list-style: none;
+  padding-top: 0;
+  display: block;
+  text-align: left;
+  padding-bottom: 9px;
+}
+h3{
+    padding-left: 30px;
+    font-size: 16px;
+    margin-top: 35px;
+}
+h5{
+  padding-left: 30px;
+}
+.footer-ul li a, .footer-ul1 li a{
+color: #3e4152;
+text-transform: intial;
+transition: all 2s;
+text-decoration: none;
+}
+ .footer-ul li a:hover{
+  text-decoration: none;
+  padding-left: 10px;
+}
+.footer-ul1 li a:hover{
+  text-decoration: none;
+  padding-left: 10px;
+}
+.social-link{
+    display: flex;
+    padding-left: 30px;
+}
+.stamp{
+    display: flex;
+    margin-top: 24px;
+}
+.Artboard{
+    height: 58px;
+    width: 46px;
+}
+.stamp2{
+    display: flex;
+}
+.Artboard2{
+    height: 50px;
+    width: 46px;
+}
+.stamp3{
+    display: flex;
+}
+.icon{
+    margin-left: 5px;
+}
+.truck{
+        margin-left: 16px;
+    margin-top: 12px;
+    height: 32px;
+}
+tfoot{
+  margin-left: 10px;
+}
+</style>
+</head>
+<body>
+	<nav>
+		<div class="logo">
+				<a href="#"><img src="image/myntralogo.png" alt="logo" title="myntra.JFIF" width="70px" height="40px" style="margin-left: 50px; margin-top: 25px; "></a>
+			</div>
+			 <div class="nav2">
+             <ul class="container ul-reset">
+             	 <li class='droppable'>
+      <a href="men.html"><b>Men</b></a>
+      <div class='mega-menu'>
+      	<!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+    <li class='droppable'>
+      <a href="women.html"><b>women</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+     <li class='droppable'>
+      <a href='kids.html'><b>kids</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+     <li class='droppable'>
+      <a href='home&living.html'><b>home & living</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+     <li class='droppable'>
+      <a href='#'><b>Beauty</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+  </ul>
+</div>
+ <div class="nav2">
+  <input class="ser-box" placeholder="Search for products, brands and more">
+   <button class="ser-icon" style="font-size:18px"><i class="fa fa-search"></i></button>
+  </div>
+ <div class="nav3">
+              <div class="right-menu">
+                <i class="fa fa-user menu1"></i>
+                  <li class='droppable-profile'>
+      <a href='#'class="pro" style="text-decoration:none;"><span class="profile">Profile<span></a>
+      <div class='mega-menu-profile'>
+       
+          <ul class="login-box">
+            <h3 class="pa1">Welcome</h3>
+            <p class="pa2">Io access account and manage orders</p>
+            <button type="button" class="login" data-toggle="modal" data-target="#exampleModal">LOGIN/SIGNUP</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img class="img-fluid" src="file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/myn-modimg.webp">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-left mt-0">Welcome to Myntra</h4>
+        <p class="text-left mt-1 mb-2">Join / Sign In using</p>
+        <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-outline-primary btn-block fb-btn"><a href="#"><img class="fb" src="fbicon.png"></a>Facebook</button>
+      </div>
+      <div class="col-md-6">
+          <button class="btn btn-outline-danger btn-block gog-btn"><a href="#"><img class="go" src="googleicon.png"></a>Google</button>
+      </div>
+    </div>
+    <div class="text-center mt-3 mb-3"><p>-------OR-------</p></div>
+    <p class="text-left">Enter Mobile Number / Email*</p>
+    <div class="form-group">
+      <input type="text" class="form-control login-input">
+    </div>
+    <div class="text-left"><button class="btn btn-warning p-3">Continue</button></div>
+    <p class="text-left mt-3">By Signing In, I agree to Terms and Conditions.</p>
+      
+    </div>
+  </div>
+</div> 
+  </div>
+            <div class="menu-bar">
+            <li><a href='#'>Orders</a></li>
+            <li><a href='#'>Wishlist</a></li>
+            <li><a href='#'>Gift Card</a></li>
+            <li><a href='#'>Contact Us</a></li>
+            <li><a href='#'>Myntra Insider<img class="gif-img" src="file:///C:/Users/hp/OneDrive/Desktop/javascript/myntra/newgifimg.gif"></a></li>
+            <br>
+            <br>
+            <li><a href='#'>Myntra Credit</a></li>
+            <li><a href='#'>Coupons</a></li>
+            <li><a href='#'>Saved Cards</a></li>
+            <li><a href='#'>Saved Address</a></li>
+          </div>
+          </ul>
+        </div>
+         </li>
+      
+      <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+ <script src="assets/js/bootstrap.js"></script>
+                <i class="fa fa-heart wishbox"></i>
+                <span class="wishlist">Wishlist</span>
+                <i class="fa fa-shopping-bag cartbag"></i>
+                <span class="bag">Bag</span>
+              </div>
+        </div>
+
+</nav>
+<div class="sidebar">
+  <div class="sidebar2">
+    <p class="sidebar3">FLAT ₹400 OFF</p>
+  </div>
+  </div>
+  <div class="ban-sec">
+  <img class="ban-img" src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/6/8/eff01060-f706-468d-b97c-95cdf43174f91528443826867-Desktop-Home-Banner.jpg">
+</div>
+<div class="row w-100">
+	<div class="col-md-9">
+		<h4 class="tex1">NICE TO SEE YOU, COME ON IN!</h4>
+    <div class="ml-4">
+		<div class="row">
+		<div class="col-md-6">
+			<img class="img-fluid" src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563782565-furnishings.jpg">
+		</div>
+		<div class="col-md-6">
+			<img class="img-fluid" src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563660020-bed.jpg">
+		</div>
+    <div class="col-md-6">
+      <img class="img-fluid" src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563866590-lamps.jpg">
+    </div>
+    <div class="col-md-6">
+      <img class="img-fluid" src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563810789-art-n-decor.jpg">
+    </div>
+    <div class="col-md-6">
+      <img class="img-fluid" src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563925069-kitchen.jpg">
+    </div>
+    <div class="col-md-6">
+      <img class="img-fluid" src="https://assets.myntassets.com/f_webp,w_350,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/2/11517563958962-bath.jpg">
+    </div>
+	</div>
+</div>
+	</div>
+	<div class="col-md-3">
+    <div class="ml-5">
+		<h6>Furnishings & Bed Linen</h6>
+    <ul class="list-group">
+  <div class="accessories-item">
+    <li class="list-group-item"><a href="#">Bed Sheets</a></li>
+    <li class="list-group-item"><a href="#">Bedding Sets & Bed Covers</a></li>
+    <li class="list-group-item"><a href="#">Blanket Quits & Dohar</a></li>
+    <li class="list-group-item"><a href="#">Pillow & Pillow Cover</a></li>
+    <li class="list-group-item"><a href="#">Cushions & Cushions Cover</a></li>
+    <li class="list-group-item"><a href="#">Curtains</a></li>
+    <li class="list-group-item"><a href="#">Mats & Dhurries</a></li>
+    <li class="list-group-item"><a href="#">Carpets</a></li>
+  </div>
+  </ul>
+  
+  <h6>Bath & Bed Linen</h6>
+  <ul class="list-group">
+  <div class="accessories-item">
+  <li class="list-group-item"><a href="#">Towel & Towel Sets</a></li>
+    <li class="list-group-item"><a href="#">Bath Robes</a></li>
+    <li class="list-group-item"><a href="#">Bathroom Accesorries</a></li>
+    <li class="list-group-item"><a href="#">Shower Curtains</a></li>
+    <li class="list-group-item"><a href="#">Bath Rugs</a></li>
+    </div>
+  </ul>
+    <h6>Home Decor</h6>
+    <ul class="list-group">
+  <div class="accessories-item">
+    <li class="list-group-item"><a href="#">Plants & Planters</a></li>
+    <li class="list-group-item"><a href="#">Aromas, Candles & Candle Holder</a></li>
+    <li class="list-group-item"><a href="#">Clocks</a></li>
+    <li class="list-group-item"><a href="#">Mirrors</a></li>
+    <li class="list-group-item"><a href="#">Wall Decor</a></li>
+    <li class="list-group-item"><a href="#">Wall Shelves</a></li>
+    <li class="list-group-item"><a href="#">Fountains</a></li>
+    <li class="list-group-item"><a href="#">Showpieces & Vases</a></li>
+    </div>
+  </ul>
+    <h6>Lamps & Lighting</h6>
+  <ul class="list-group">
+     <div class="accessories-item">
+    <li class="list-group-item"><a href="#">Floor & Wall</a></li>
+    <li class="list-group-item"><a href="#">Fire Lamp</a></li>
+  </div>
+  </ul>
+  <h6>Kitchen & Table</h6>
+  <ul class="list-group">
+    <div class="accessories-item">
+    <li class="list-group-item"><a href="#">Table & ServeWare</a></li>
+    <li class="list-group-item"><a href="#">Bar & Drinkware</a></li>
+    <li class="list-group-item"><a href="#">Cookware & Kitchen Tools</a></li>
+    <li class="list-group-item"><a href="#">Kitchen Storage</a></li>
+    <li class="list-group-item"><a href="#">Table Covers & Furnishing</a></li>
+  </div>
+     </ul>
+     <h6>Storage & Organisers</h6>
+  <ul class="list-group">
+    <div class="accessories-item">
+    <li class="list-group-item"><a href="#">Organiser</a></li>
+    <li class="list-group-item"><a href="#">Hooks & Holders</a></li>
+  </div>
+  </ul>
+</div>
+	</div>
+</div>
+<img class="w-100" src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/1/11517478281102-Home-page-Desktop_12.jpg">
+<div class="container-fluid">
+  <div class="row pb-5 back">
+    <div class="col-md-4">
+      <img class="w-100" src="https://assets.myntassets.com/f_webp,w_326,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/1/11517485441956-Wedding-checklist.jpg">
+    </div>
+    <div class="col-md-4">
+      <img class="w-100" src="https://assets.myntassets.com/f_webp,w_326,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/1/11517478592904-Home-page-Desktop_14.jpg">
+    </div>
+    <div class="col-md-4">
+      <img class="w-100" src="https://assets.myntassets.com/f_webp,w_326,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2018/2/1/11517478592892-Home-page-Desktop_15.jpg">
+    </div>
+  </div>
+  </div>
+  <h4>featured brand</h4>
+  <div id="home_result1"> </div>
+           <script>
+    const home11 = [
+    {
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/3/1/dc2450db-d76d-4d2e-b937-49c0c68ed7f01551443106510-Home-page-Desktop-Brands_09.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/3/1/99c57d52-b50e-4e2e-9582-cb839543ab071551443106488-Home-page-Desktop-Brands_10.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/3/1/9e5a0444-409f-40a3-b199-d4b0b43f94fc1551443106478-Home-page-Desktop-Brands_11.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/3/1/e90b8666-20da-4bd0-8885-235859c0947f1551443106467-Home-page-Desktop-Brands_12.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/banners/2019/3/1/a38e440e-1ff7-4092-acbe-46d74b38384a1551443106457-Home-page-Desktop-Brands_13.jpg",
+     }
+    ];
+    for(i=0,len=home11.length,text="";i<len; i++){
+      text +='<div class="card-home1"><div class="home-image1">';
+      text +='<img src="'+home11[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("home_result1").innerHTML=text;
+    </script>
+  <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+ <script src="assets/js/bootstrap.js"></script>
+  <footer>
+         <div class="w-30">
+                <h3>ONLINE SHOPPING</h3>
+                <ul class="footer-ul">
+                  <li><a href="#">Men</a></li>
+                  <li><a href="#">Women</a></li>
+                  <li><a href="#">Kids</a></li>
+                  <li><a href="#">Home & Living</a></li>
+                  <li><a href="#">Beauty</a></li>
+                  <li><a href="#">Gift Card</a></li>
+                  <li><a href="#">Myntra Insider</a></li>
+                </ul>
+              </div>
+              <div class="w-30">
+                <h3>USEFUL LINKS</h3>
+                <ul class="footer-ul1">
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">T&C</a></li>
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">Track Orders</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">Cancellation</a></li>
+                  <li><a href="#">Returns</a></li>
+                </ul>
+              </div>
+              <div class="w-30">
+                <h3>EXPERIENCE MYNTRA APP ON MOBILE</h3>
+                <div>
+                  <a href="https://play.google.com/store/apps/details?id=com.nbt.reader&hl=en_IN&gl=US">
+                 <img class="playstore" src="https://www.hutchrec.com/wp-content/uploads/2018/09/App-Store-and-Google-Play.jpg" width="100px;">
+                  </a>
+              </div>
+              <h5>KEEP IN TOUCH</h5>
+              <div class="social-link">
+                <a href="#"><i class="fa fa-facebook icon"></i></a>
+                <a href="#"><i class="fa fa-twitter icon"></i></a>
+                <a href="#"><i class="fa fa-instagram icon"></i></a>
+                <a href="#"><i class="fa fa-whatsapp icon"></i></a>
+            </div>
+            <p><address>
+         3rd Floor, AKR Tech Park, 7th Mile, Krishna Reddy Industrial Area, Kudlu Gate, Bangalore 560068.
+           </address></p>
+        </div>
+              <div class="w-30">
+                <div class="stamp">
+                    <div>
+                    <img class="Artboard" src="image/Artboard 5.svg">    
+             </div>
+              <div>
+                <p><cite><B>100% ORIGINAL</B></cite> guarantee for all products at myntra.com</p>
+            </div>
+        </div>
+        <div class="stamp2">
+             <div>
+             <img class="Artboard2" src="image/Artboard 5 copy.svg">    
+             </div>
+             <div>
+             <p><mark><B>Return with 30 days</B></mark> of receiving your order</p>
+            </div>
+        </div>
+        <div class="stamp3">
+            <div>
+        <img  class="truck" src="image/Truck.png">
+    </div>
+    <div>
+        <p><mark><B>Get free delivery</B></mark> for every order above Rs.799</p>
+    </div>
+</div>
+</div>
+    </footer>
+ <tfoot>
+  <p>&#169; 2024  All right reserved.Design and developed by:<a target="_blank" href="#"> Soudamini Panda</a></p>
+</tfoot>         
+</body>
+</html>

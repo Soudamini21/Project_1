@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <link rel="stylesheet" href="slider/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="slider/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+
+<style>
+nav{
+  width: 100%;
+	display: flex;
+	background-color:#fff;
+	position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+/* .nav2{
+display: inline-block;
+float: right;
+} */
+
+ul.container.ul-reset li {
+    display: inline-block;
+    padding-left: 20px;
+}
+.ul-reset {
+  list-style: none;
+  margin: 22px 0px 0px 21px;
+}
+nav > div > ul > li:first-child {padding-left: 0;}
+nav > div > ul > li:last-child {padding-right: 0;}
+nav > div > ul > li > a {
+	font-size: 15px;
+    letter-spacing: .3px;
+    color: #282c3f;
+  /*color: #fff;*/
+    display: block;
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    /*font-weight: 500px;*/
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+nav > div > ul > li:hover > a {
+  color: #69aae0; 
+    border-bottom: 3px solid #69aae0;
+    text-decoration: none;
+}
+.mega-menu {
+  background: #f0f0f0;
+    display: none;
+    left: 40;
+    position: absolute;
+    text-align: left;
+    width: 60%;
+}
+.mega-menu h3 {color: #444;}
+  .mega-menu ul {
+  float: left;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    width: 205px;
+}
+.mega-menu ul:last-child {margin-right: 0;}
+.mega-menu a {
+  border-bottom: 1px solid #ddd;
+    color: #fa18e9;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+.mega-menu a:hover {color: #2d6a91;}
+.droppable {position: static;}
+.droppable:hover .mega-menu {display: block;}
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+input{
+  float: left;
+  margin-top: 33px;
+  margin-left: 84px;
+  padding: 10px;
+  width: 497px;
+  border: none;
+  background: #f1f1f1;
+}
+button {
+  border: none;
+  margin-top: 41px;
+  margin-left: -45px;
+}
+.nav3{
+  width: 18%;
+  float: right;
+}
+.right-menu{
+  display: flex;
+}
+.menu1{
+  margin: 34px 0 0px 129px;
+  font-size: 24px;
+}
+.profile{
+  margin: 57px 0 0 -29px;
+  display: flex;
+}
+.wishbox{
+  margin: 37px 0 0 26px;
+  font-size: 20px;
+}
+.wishlist{
+  margin: 57px 0 0 -36px;
+}
+.cartbag{
+  margin: 36px 0 0 16px;
+  font-size: 20px;
+}
+.bag{
+  margin: 57px 0 0 -22px;
+}
+.wo-banner{
+  height: 100%;
+  margin-left:38px;
+  margin-top: 77px;
+  margin-bottom: 48px;
+}
+.wo-banner:hover {
+  /*box-shadow: 10px 10px 10px 10px #000000;*/
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+.owl-theme .owl-dots .owl-dot span {
+  margin-top: -40px;
+} 
+h4{
+  text-transform: uppercase;
+  color: #3e4152;
+  letter-spacing: .15em;
+  font-size: 1.8em;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  max-height: 5em;
+  font-weight: 500;
+}
+/* #wo_result1{
+  display: inline-flex;
+} */
+
+.card-wo1{
+  width:260px;
+  /*background-color:gray;*/
+  margin-left: 35px;
+  display: inline-block;
+  margin-bottom: 4rem;
+}
+.wo-image1 img{
+  width: 100%;
+  margin-bottom: -4rem;
+}
+
+#wo_result2{
+  display: inline-flex;
+}
+.card-wo2{
+  width:211px;
+  margin-left: 34px;
+  margin-bottom: 2rem;
+  /*background-color:gray;*/
+      /* display: inline-block;*/
+}
+.wo-image2 img{
+  width: 100%;
+  /* margin-bottom: 7px;*/
+}
+#wo_result3{
+  display: inline-flex;
+}
+.card-wo3{
+  width:260px;
+  margin-left: 34px;
+  margin-bottom: 4rem;
+  /*background-color:gray;*/
+      /* display: inline-block;*/
+}
+.wo-image3 img{
+  width: 100%;
+  /* margin-bottom: 7px;*/
+}
+footer{
+width: 100%;
+display: flex;
+background-color:#fff;
+color: black;
+}
+.w-30{
+  width: 30%;
+  margin-left: 20px;
+}
+.footer-ul li, .footer-ul1 li{
+  display: flex;
+  list-style: none;
+  padding-top: 0;
+  display: block;
+  text-align: left;
+  padding-bottom: 9px;
+}
+h3{
+  padding-left: 30px;
+  font-size: 16px;
+  margin-top: 35px;
+}
+h5{
+  padding-left: 30px;
+}
+
+.footer-ul li a, .footer-ul1 li a{
+  color: #3e4152;
+  text-transform: intial;
+  transition: all 2s;
+  text-decoration: none;
+}
+
+.footer-ul li a:hover{
+  text-decoration: none;
+  padding-left: 10px;
+}
+.footer-ul1 li a:hover{
+  text-decoration: none;
+  padding-left: 10px;
+}
+.social-link{
+  display: flex;
+  padding-left: 30px;
+}
+.stamp{
+  display: flex;
+  margin-top: 24px;
+}
+.Artboard{
+  height: 58px;
+  width: 46px;
+}
+.stamp2{
+  display: flex;
+}
+.Artboard2{
+  height: 50px;
+  width: 46px;
+}
+.stamp3{
+  display: flex;
+}
+.icon{
+  margin-left: 5px;
+}
+.truck{
+  margin-left: 16px;
+  margin-top: 12px;
+  height: 32px;
+}
+tfoot{
+  margin-left: 10px;
+}
+.sidebar{
+  right: 0;
+}
+.sidebar {
+  position: fixed;
+  bottom: 14rem;
+  width: 48px;
+  height: 245px;
+  background-color: #535766;
+  z-index: 6;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.sidebar3{
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  width: 36px;
+  padding: 4px;
+  height: 241px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  color: #fcfcfc;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <a href="#"><img src="image/myntralogo.png" alt="logo" title="myntra.JFIF" width="70px" height="40px" style="margin-left: 50px; margin-top: 25px; "></a>
+      </div>
+       <div class="nav2">
+            <ul class="container ul-reset">
+              <li class='droppable'>
+      <a href='men.html'><b>Men</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+    <li class='droppable'>
+      <a href='women.html'><b>women</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+     <li class='droppable'>
+      <a href='kids.html'><b>kids</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+     <li class='droppable'>
+      <a href='home&living.html'><b>home & living</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+     <li class='droppable'>
+      <a href='#'><b>Beauty</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+  </ul>
+</div>
+ <div class="nav2">
+  <input placeholder="Search for products, brands and more">
+   <button style="font-size:18px"><i class="fa fa-search"></i></button>
+  </div>
+ <div class="nav3">
+              <div class="right-menu">
+                <i class="fa fa-user menu1"></i>
+                <span class="profile">Profile</span>
+                <i class="fa fa-heart wishbox"></i>
+                <span class="wishlist">Wishlist</span>
+                <i class="fa fa-shopping-bag cartbag"></i>
+                <span class="bag">Bag</span>
+              </div> 
+            </div>
+</nav>
+<div class="sidebar">
+  <div class="sidebar2">
+    <p class="sidebar3">FLAT ₹400 OFF</p>
+  </div>
+  </div>
+<div class="women-sec1">
+    <a href="#"><img class="wo-banner" src ="image/wo-banner.webp"></a>
+</div>
+
+<div class="owl-carousel owl-theme">
+          <div class="item">
+              <a href="#"><img src="image/men-sec2.jpg",></a> 
+            </div>
+             <div class="item">
+              <a href="#"><img src="image/men-sec22.webp",> </a> 
+            </div>
+          </div>
+            <script src="slider/assets/vendors/jquery.min.js"></script>
+    <script src="slider/assets/owlcarousel/owl.carousel.js"></script>
+     <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                margin: 10,
+                nav: false,
+                loop: true,
+                 autoplay:true,
+    autoplayTimeout:2000,
+    autoplayHoverPause:true,
+                responsive: {
+            
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 2
+                  },
+                  1000: {
+                    items: 1
+                  }
+                }
+              })
+            })
+          </script>
+          <div>
+            <h4><b>BIGGEST DEALS ON TOP BRANDS</b></h4>
+          </div>
+
+          <div id="wo_result1"> </div>
+           <script>
+    const women11 = [
+    {
+    "image":"image/wo1img.webp",
+     },{
+    "image":"image/wo2img.webp",
+     },{
+    "image":"image/wo3img.webp",
+     },{
+    "image":"image/wo4img.webp",
+    },{
+    "image":"image/wo5img.webp",
+     },{
+    "image":"image/wo6img.webp",
+     },{
+    "image":"image/wo7img.webp",
+     },{
+      "image":"image/wo8img.webp",
+     },{
+      "image":"image/wo9img.webp",
+     },{
+
+    "image":"image/wo10img.webp",
+     }
+    ];
+    for(i=0,len=women11.length,text="";i<len; i++){
+      text +='<div class="card-wo1"><div class="wo-image1">';
+      text +='<img src="'+women11[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("wo_result1").innerHTML=text;
+    </script>
+
+     <div>
+      <h4><b>CATEGORIES TO BAG</b></h4>
+      </div>
+      <div id="wo_result2"> </div>
+      <script>
+ const women22 = [
+    {
+    "image":"image/wo21img.webp",
+     },{
+    "image":"image/wo22img.webp",
+     },{
+    "image":"image/wo23img.webp",
+     },{
+    "image":"image/wo24img.webp",
+    },{
+      "image":"image/wo25img.webp",
+    },{
+
+    "image":"image/wo26img.webp",
+     }
+    ];
+    for(i=0,len=women22.length,text="";i<len; i++){
+      text +='<div class="card-wo2"><div class="wo-image2">';
+      text +='<img src="'+women22[i].image+'"></div>';
+        text +='<div class="prod-men1-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("wo_result2").innerHTML=text;
+    </script>
+
+    <div>
+      <h4><b>EXPLORE TOP BRANDS</b></h4>
+      </div>
+      <div id="wo_result3"> </div>
+      <script>
+ const women33 = [
+    {
+    "image":"image/wo31img.webp",
+     },{
+    "image":"image/wo32img.webp",
+     },{
+    "image":"image/wo33img.webp",
+     },{
+    "image":"image/wo34img.webp",
+    },{
+    "image":"image/wo35img.webp",
+     }
+    ];
+    for(i=0,len=women33.length,text="";i<len; i++){
+      text +='<div class="card-wo3"><div class="wo-image3">';
+      text +='<img src="'+women33[i].image+'"></div>';
+        text +='<div class="prod-men1-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("wo_result3").innerHTML=text;
+    </script>
+
+
+    <footer>
+         <div class="w-30">
+                <h3>ONLINE SHOPPING</h3>
+                <ul class="footer-ul">
+                  <li><a href="#">Men</a></li>
+                  <li><a href="#">Women</a></li>
+                  <li><a href="#">Kids</a></li>
+                  <li><a href="#">Home & Living</a></li>
+                  <li><a href="#">Beauty</a></li>
+                  <li><a href="#">Gift Card</a></li>
+                  <li><a href="#">Myntra Insider</a></li>
+                </ul>
+              </div>
+              <div class="w-30">
+                <h3>USEFUL LINKS</h3>
+                <ul class="footer-ul1">
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">T&C</a></li>
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">Track Orders</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">Cancellation</a></li>
+                  <li><a href="#">Returns</a></li>
+                </ul>
+              </div>
+              <div class="w-30">
+                <h3>EXPERIENCE MYNTRA APP ON MOBILE</h3>
+                <div>
+                  <a href="https://play.google.com/store/apps/details?id=com.nbt.reader&hl=en_IN&gl=US">
+                 <img class="playstore" src="https://www.hutchrec.com/wp-content/uploads/2018/09/App-Store-and-Google-Play.jpg" width="100px;">
+                  </a>
+              </div>
+              <h5>KEEP IN TOUCH</h5>
+              <div class="social-link">
+                <a href="#"><i class="fa fa-facebook icon"></i></a>
+                <a href="#"><i class="fa fa-twitter icon"></i></a>
+                <a href="#"><i class="fa fa-instagram icon"></i></a>
+                <a href="#"><i class="fa fa-whatsapp icon"></i></a>
+            </div>
+            <p><address>
+         3rd Floor, AKR Tech Park, 7th Mile, Krishna Reddy Industrial Area, Kudlu Gate, Bangalore 560068.
+           </address></p>
+        </div>
+              <div class="w-30">
+                <div class="stamp">
+                    <div>
+                    <img class="Artboard" src="image/Artboard 5.svg">    
+             </div>
+              <div>
+                <p><cite><B>100% ORIGINAL</B></cite> guarantee for all products at myntra.com</p>
+            </div>
+        </div>
+        <div class="stamp2">
+             <div>
+             <img class="Artboard2" src="image/Artboard 5 copy.svg">    
+             </div>
+             <div>
+             <p><mark><B>Return with 30 days</B></mark> of receiving your order</p>
+            </div>
+        </div>
+        <div class="stamp3">
+            <div>
+        <img  class="truck" src="image/Truck.png">
+    </div>
+    <div>
+        <p><mark><B>Get free delivery</B></mark> for every order above Rs.799</p>
+    </div>
+</div>
+</div>
+    </footer>
+ <tfoot>
+  <p>&#169; 2024  All right reserved.Design and developed by:<a target="_blank" href="#"> Soudamini Panda</a></p>
+</tfoot>         
+</body>
+</html>
+    
+
+
+    

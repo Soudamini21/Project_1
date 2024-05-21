@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <link rel="stylesheet" href="slider/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="slider/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+
+<style>
+nav{
+  width: 100%;
+	display: flex;
+	background-color:#fff;
+	position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+
+/*
+.nav2{
+  display: inline-block;
+  float: right;
+  }
+*/
+
+ul.container.ul-reset li {
+    display: inline-block;
+    padding-left: 20px;
+}
+.ul-reset {
+  list-style: none;
+  margin: 22px 0px 0px 21px;
+}
+nav > div > ul > li:first-child {padding-left: 0;}
+nav > div > ul > li:last-child {padding-right: 0;}
+nav > div > ul > li > a {
+	font-size: 15px;
+    letter-spacing: .3px;
+    color: #282c3f;
+  /*color: #fff;*/
+    display: block;
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    /*font-weight: 500px;*/
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+nav > div > ul > li:hover > a {
+  color: #69aae0; 
+    border-bottom: 3px solid #69aae0;
+    text-decoration: none;
+}
+.mega-menu {
+  background: #f0f0f0;
+    display: none;
+    left: 40;
+    position: absolute;
+    text-align: left;
+    width: 60%;
+}
+.mega-menu h3 {color: #444;}
+  .mega-menu ul {
+  float: left;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    width: 205px;
+}
+.mega-menu ul:last-child {margin-right: 0;}
+.mega-menu a {
+  border-bottom: 1px solid #ddd;
+    color: #fa18e9;
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+}
+.mega-menu a:hover {color: #2d6a91;}
+.droppable {position: static;}
+.droppable:hover .mega-menu {display: block;}
+form.example input[type=text] {
+    padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+input{
+      float: left;
+    margin-top: 33px;
+    margin-left: 84px;
+    padding: 10px;
+    width: 497px;
+    border: none;
+    background: #f1f1f1;
+}
+button {
+  border: none;
+  margin-top: 41px;
+  margin-left: -45px;
+}
+.nav3{
+  width: 18%;
+    float: right;
+}
+.right-menu{
+  display: flex;
+}
+.menu1{
+    margin: 34px 0 0px 129px;
+    font-size: 24px;
+}
+.profile{
+    margin: 57px 0 0 -29px;
+    display: flex;
+}
+.wishbox{
+    margin: 37px 0 0 26px;
+    font-size: 20px;
+}
+.wishlist{
+    margin: 57px 0 0 -36px;
+}
+.cartbag{
+    margin: 36px 0 0 16px;
+    font-size: 20px;
+}
+.bag{
+     margin: 57px 0 0 -22px;
+}
+ .sidebar{
+    right: 0;
+}
+.sidebar {
+    position: fixed;
+    bottom: 14rem;
+    width: 48px;
+    height: 245px;
+    background-color: #535766;
+    z-index: 6;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.sidebar3{
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    width: 36px;
+    padding: 4px;
+    height: 241px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    -webkit-margin-after: 0;
+    margin-block-end: 0;
+    -webkit-margin-before: 0;
+    margin-block-start: 0;
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    margin-top: 6rem;
+}
+.owl-theme .owl-dots .owl-dot span {
+    margin-top: -25px;
+  }
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  width: 99%;
+}
+
+  h4{
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    max-height: 5em;
+    font-weight: 500;
+  }
+  #kids_result1{
+    display: inline-flex;
+  }
+  .card-kids1{
+    width:129px;
+    /*background-color:gray;*/
+    margin-left: 35px;
+    /*display: inline-block;*/
+    margin-bottom: 4rem;
+  }
+  .kids-image1 img{
+    width: 100%;
+    margin-bottom: -4rem;
+  }
+  #kids_result2{
+    display: inline-flex;
+  }
+  .card-kids2{
+    width:171px;
+    /*background-color:gray;*/
+    margin-left: 35px;
+    /*display: inline-block;*/
+    margin-bottom: 4rem;
+  }
+  .kids-image2 img{
+    width: 121%;
+    margin-bottom: -4rem;
+  }
+
+  #kids_result3{
+    display: inline-flex;
+  }
+  .card-kids3{
+    width:205px;
+    /*background-color:gray;*/
+    margin-left: 35px;
+    /*display: inline-block;*/
+    margin-bottom: 4rem;
+  }
+  .kids-image3 img{
+    width: 118%;
+    margin-bottom: -4rem;
+  }
+  #kids_result4{
+    /*display: inline-flex;*/
+    margin-left: -2rem;
+  }
+  .card-kids4{
+    width:260px;
+    /*background-color:gray;*/
+    margin-left: 35px;
+        display: inline-block;
+        margin-bottom: 4rem;
+  }
+  .kids-image4 img{
+    width: 125%;
+    margin-bottom: -4rem;
+  }
+#kids_result5{
+    display: inline-flex;
+    margin-left: -8rem;
+  }
+.card-kids5{
+    width:37%;
+    /*background-color:gray;*/
+    margin-left: 143px;
+    /*display: inline-block;*/
+    margin-bottom: 4rem;
+  }
+.kids-image5 img{
+    width: 118%;
+    margin-bottom: -4rem;
+  }
+#kids_result6{
+    display: inline-flex;
+  }
+.card-kids6{
+    width:205px;
+    /*background-color:gray;*/
+    margin-left: 35px;
+    /*display: inline-block;*/
+    margin-bottom: 4rem;
+  }
+.kids-image6 img{
+    width: 118%;
+    margin-bottom: -4rem;
+  }
+footer{
+  width: 100%;
+  display: flex;
+  background-color:#fff;
+  color: black;
+}
+.w-30{
+  width: 30%;
+  margin-left: 20px;
+}
+.footer-ul li, .footer-ul1 li{
+    display: flex;
+  list-style: none;
+  padding-top: 0;
+  display: block;
+  text-align: left;
+  padding-bottom: 9px;
+}
+h3{
+    padding-left: 30px;
+    font-size: 16px;
+    margin-top: 35px;
+}
+h5{
+  padding-left: 30px;
+}
+.footer-ul li a, .footer-ul1 li a{
+color: #3e4152;
+text-transform: intial;
+transition: all 2s;
+text-decoration: none;
+}
+.footer-ul li a:hover{
+  text-decoration: none;
+  padding-left: 10px;
+}
+.footer-ul1 li a:hover{
+  text-decoration: none;
+  padding-left: 10px;
+}
+.social-link{
+    display: flex;
+    padding-left: 30px;
+}
+.stamp{
+    display: flex;
+    margin-top: 24px;
+}
+.Artboard{
+    height: 58px;
+    width: 46px;
+}
+.stamp2{
+    display: flex;
+}
+.Artboard2{
+    height: 50px;
+    width: 46px;
+}
+.stamp3{
+    display: flex;
+}
+.icon{
+    margin-left: 5px;
+}
+.truck{
+        margin-left: 16px;
+    margin-top: 12px;
+    height: 32px;
+}
+tfoot{
+  margin-left: 10px;
+}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <a href="#"><img src="image/myntralogo.png" alt="logo" title="myntra.JFIF" width="70px" height="40px" style="margin-left: 50px; margin-top: 25px; "></a>
+      </div>
+       <div class="nav2">
+             <ul class="container ul-reset">
+               <li class='droppable'>
+      <a href='men.html'><b>Men</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+    <li class='droppable'>
+      <a href='women.html'><b>women</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+     <li class='droppable'>
+      <a href='kids.html'><b>kids</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+     <li class='droppable'>
+      <a href='home&living.html'><b>home & living</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+
+     <li class='droppable'>
+      <a href='#'><b>Beauty</b></a>
+      <div class='mega-menu'>
+        <!-- <div class="container cf"> -->
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <!-- .ul-reset -->
+        </div><!-- .container -->
+      <!-- .mega-menu -->
+    </li>
+  </ul>
+</div>
+ <div class="nav2">
+  <input placeholder="Search for products, brands and more">
+   <button style="font-size:18px"><i class="fa fa-search"></i></button>
+  </div>
+ <div class="nav3">
+              <div class="right-menu">
+                <i class="fa fa-user menu1"></i>
+                <span class="profile">Profile</span>
+                <i class="fa fa-heart wishbox"></i>
+                <span class="wishlist">Wishlist</span>
+                <i class="fa fa-shopping-bag cartbag"></i>
+                <span class="bag">Bag</span>
+              </div> 
+            </div>
+</nav>
+<div class="sidebar">
+  <div class="sidebar2">
+    <p class="sidebar3">FLAT ₹400 OFF</p>
+  </div>
+  </div>
+
+  <div class="owl-carousel owl-theme">
+          <div class="item">
+              <img src="image/kids-banner1.webp",>  
+            </div>
+             <div class="item">
+              <img src="image/kids-banner2.webp",>  
+            </div>
+             <div class="item">
+              <img src="image/kids-banner3.webp",>  
+            </div>
+             <div class="item">
+              <img src="image/kids-banner4.jpg",>
+            </div>
+        </div>
+
+<script src="slider/assets/vendors/jquery.min.js"></script>
+    <script src="slider/assets/owlcarousel/owl.carousel.js"></script>
+     <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                margin: 10,
+                nav: false,
+                loop: true,
+                 autoplay:true,
+    autoplayTimeout:8000,
+    autoplayHoverPause:true,
+                responsive: {
+            
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 4
+                  },
+                  1000: {
+                    items: 1
+                  }
+                }
+              })
+            })
+          </script>
+
+          <div>
+            <h4><b>FAVOURITE BRANDS</b></h4>
+          </div>
+
+          <div id="kids_result1"> </div>
+           <script>
+    const kids11 = [
+    {
+    "image":"image/kids1img.webp",
+     },{
+    "image":"image/kids2img.webp",
+     },{
+    "image":"image/kids3img.webp",
+     },{
+    "image":"image/kids4img.webp",
+    },{
+    "image":"image/kids5img.webp",
+     },{
+    "image":"image/kids6img.webp",
+     },{
+    "image":"image/kids7img.webp",
+     },{
+      "image":"image/kids8img.webp",
+     },{
+
+    "image":"image/kids9img.webp",
+     }
+    ];
+    for(i=0,len=kids11.length,text="";i<len; i++){
+      text +='<div class="card-kids1"><div class="kids-image1">';
+      text +='<img src="'+kids11[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("kids_result1").innerHTML=text;
+    </script>
+
+          <div>
+            <h4><b>TOP PICKS</b></h4>
+          </div>
+
+          <div id="kids_result2"> </div>
+           <script>
+    const kids22 = [
+    {
+    "image":"image/kids21img.webp",
+     },{
+    "image":"image/kids22img.webp",
+     },{
+    "image":"image/kids23img.webp",
+    },{
+    "image":"image/kids24img.webp",
+     },{
+    "image":"image/kids25img.webp",
+     },{
+    "image":"image/kids26img.webp",
+     },{
+    "image":"image/kidds27img.webp",
+     }
+    ];
+    for(i=0,len=kids22.length,text="";i<len; i++){
+      text +='<div class="card-kids2"><div class="kids-image2">';
+      text +='<img src="'+kids22[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("kids_result2").innerHTML=text;
+    </script>
+
+    <div>
+            <h4><b>ICONIC BRANDS</b></h4>
+          </div>
+
+          <div id="kids_result3"> </div>
+           <script>
+    const kids33 = [
+    {
+    "image":"image/kids31img.webp",
+     },{
+    "image":"image/kids32img.webp",
+    },{
+    "image":"image/kids33img.webp",
+     },{
+    "image":"image/kids34img.webp",
+     },{
+    "image":"image/kids35img.webp",
+     },{
+    "image":"image/kids36img.webp",
+     }
+    ];
+    for(i=0,len=kids33.length,text="";i<len; i++){
+      text +='<div class="card-kids3"><div class="kids-image3">';
+      text +='<img src="'+kids33[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("kids_result3").innerHTML=text;
+    </script>
+    <h4><b>FASHION & ESSENTIALS</b></h4>
+    <div id="kids_result4"> </div>
+           <script>
+    const kids44 = [
+    {
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/f20838ab-108c-4fe6-bd74-0dc7551a2bbd1604906586589-34-Essentials-Masks.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/3df8a117-4db8-4cb6-ac0e-e60291d957241604906586646-35-Essentials-BabyCare.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/29baf945-9e5b-4f0e-bb05-0ce65c57f9c91604906586502-32-Essentials-Shorts.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/353fd453-6a17-45b9-b3da-a3dfd88121a31604906586547-33-Essentials-Valuepacks.jpg",
+    },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/c22c8c4b-753a-4f90-8def-511d2ed6caf31604906586731-37-Essentials-EthnicWear.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/efc4b19d-179f-4437-961c-839df50299a51604906586690-36-Essentials-Night_innerwear.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/4e6eefd3-3355-4c1c-851e-48a49c97d5b31604906586407-30-Essentials-Onesies.jpg",
+     },{
+      "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/33368b8b-8702-4108-96a9-b8fa5b7ed36f1604906586455-31-Essentials-FlipFlop_sandals.jpg",
+     },{
+      "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/2ab2f5b3-441a-430c-a605-2ac9d06007c01604906586315-28-Essentials-Dresses.jpg",
+     },{
+
+    "image":"https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/c75a2039-4199-4174-b1b9-fecd30f7d3f91604906586359-29-Essentials-Tshirts_Tops.jpg",
+     }
+    ];
+    for(i=0,len=kids44.length,text="";i<len; i++){
+      text +='<div class="card-kids4"><div class="kids-image4">';
+      text +='<img src="'+kids44[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("kids_result4").innerHTML=text;
+    </script>
+    <h4><b>EXPLORE MORE</b></h4>
+    <div id="kids_result5"> </div>
+           <script>
+    const kids55 = [
+    {
+    "image":"https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/630c5d84-b4fa-4ba8-aa92-c91cd134b9201604906586823-39-Banner-LogoMania.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_490,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/7e5d76b3-afd1-4e82-8eee-179269cbab1c1604906586871-40-Banner-CharacterStore.jpg",
+     }
+    ];
+    for(i=0,len=kids55.length,text="";i<len; i++){
+      text +='<div class="card-kids5"><div class="kids-image5">';
+      text +='<img src="'+kids55[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("kids_result5").innerHTML=text;
+    </script>
+    <div>
+            <h4><b>ICONIC BRANDS</b></h4>
+          </div>
+
+          <div id="kids_result6"> </div>
+           <script>
+    const kids66 = [
+    {
+    "image":"https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/df528847-96b6-48cc-9104-064ad788804c1604906588040-61-BudgetBuys-TshirtsUnder499.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/e42fbdcd-31cd-43de-b1eb-0f3f4351e08d1604906588093-62-BudgetBuys-DressesUnder799.jpg",
+    },{
+    "image":"https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/1abffc52-836d-4778-a034-a851b45e43c31604906588162-63-BudgetBuys-EthnicWearUnder999.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/bb9520c5-20c6-496c-811e-4693bc2828b31604906588221-64-BudgetBuys-ShortsUnder599.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/8430d7ff-a2f4-496a-bf90-b1c3a8cc7d231604906588272-65-BudgetBuys-ValuePacksUnder799.jpg",
+     },{
+    "image":"https://assets.myntassets.com/f_webp,w_163,c_limit,fl_progressive,dpr_2.0/assets/images/2020/11/9/af518c66-a610-4ab7-91bf-b343b9c1b8501604906588337-66-BudgetBuys-FootwearUnder699.jpg",
+     }
+    ];
+    for(i=0,len=kids66.length,text="";i<len; i++){
+      text +='<div class="card-kids6"><div class="kids-image6">';
+      text +='<img src="'+kids66[i].image+'"></div>';
+        text +='<div class="prod-title">';
+        text +='</div></div>'
+    }
+    document.getElementById("kids_result6").innerHTML=text;
+    </script>
+
+    <footer>
+         <div class="w-30">
+                <h3>ONLINE SHOPPING</h3>
+                <ul class="footer-ul">
+                  <li><a href="#">Men</a></li>
+                  <li><a href="#">Women</a></li>
+                  <li><a href="#">Kids</a></li>
+                  <li><a href="#">Home & Living</a></li>
+                  <li><a href="#">Beauty</a></li>
+                  <li><a href="#">Gift Card</a></li>
+                  <li><a href="#">Myntra Insider</a></li>
+                </ul>
+              </div>
+              <div class="w-30">
+                <h3>USEFUL LINKS</h3>
+                <ul class="footer-ul1">
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">T&C</a></li>
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">Track Orders</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">Cancellation</a></li>
+                  <li><a href="#">Returns</a></li>
+                </ul>
+              </div>
+              <div class="w-30">
+                <h3>EXPERIENCE MYNTRA APP ON MOBILE</h3>
+                <div>
+                  <a href="https://play.google.com/store/apps/details?id=com.nbt.reader&hl=en_IN&gl=US">
+                 <img class="playstore" src="https://www.hutchrec.com/wp-content/uploads/2018/09/App-Store-and-Google-Play.jpg" width="100px;">
+                  </a>
+              </div>
+              <h5>KEEP IN TOUCH</h5>
+              <div class="social-link">
+                <a href="#"><i class="fa fa-facebook icon"></i></a>
+                <a href="#"><i class="fa fa-twitter icon"></i></a>
+                <a href="#"><i class="fa fa-instagram icon"></i></a>
+                <a href="#"><i class="fa fa-whatsapp icon"></i></a>
+            </div>
+            <p><address>
+         3rd Floor, AKR Tech Park, 7th Mile, Krishna Reddy Industrial Area, Kudlu Gate, Bangalore 560068.
+           </address></p>
+        </div>
+              <div class="w-30">
+                <div class="stamp">
+                    <div>
+                    <img class="Artboard" src="image/Artboard 5.svg">    
+             </div>
+              <div>
+                <p><cite><B>100% ORIGINAL</B></cite> guarantee for all products at myntra.com</p>
+            </div>
+        </div>
+        <div class="stamp2">
+             <div>
+             <img class="Artboard2" src="image/Artboard 5 copy.svg">    
+             </div>
+             <div>
+             <p><mark><B>Return with 30 days</B></mark> of receiving your order</p>
+            </div>
+        </div>
+        <div class="stamp3">
+            <div>
+        <img  class="truck" src="image/Truck.png">
+    </div>
+    <div>
+        <p><mark><B>Get free delivery</B></mark> for every order above Rs.799</p>
+    </div>
+</div>
+</div>
+    </footer>
+ <tfoot>
+  <p>&#169; 2024  All right reserved.Design and developed by:<a target="_blank" href="#"> Soudamini Panda</a></p>
+</tfoot>         
+</body>
+</html>
+    
+
+
+    
+    
+
+      
